@@ -1,0 +1,135 @@
+.main {
+    min-height: 100%;
+    padding: 1.5rem;
+    display: grid;
+    place-items: center;
+    background-color: var(--pale-blue);
+    background-image: url(../images/pattern-background-mobile.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: top;
+}
+
+.main__plan-card {
+    border-radius: 1rem;
+    background-color: var(--very-pale-blue);
+}
+
+.main__plan-card__illustration {
+    width: 100%;
+    border-radius: 1rem 1rem 0 0;
+}
+
+.main__plan-card__content {
+    padding: 1.5rem 2rem;
+    display: grid;
+    gap: 2rem;
+}
+
+.plan-card__content__header {
+    display: grid;
+    gap: 1rem;
+    text-align: center;
+}
+
+.content__header__title {
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: var(--dark-blue);
+}
+
+.content__header__description {
+    line-height: 1.6rem;
+    font-size: 1rem;
+    color: var(--desaturated-blue);
+}
+
+.main__plan-card__body {
+    display: flex;
+    align-items: center;
+    gap: 1.4rem;
+}
+
+.plan-card__body__plan-selected {
+    flex: 1;
+}
+
+.body__plan-selected__annual-plan-text {
+    font-size: 1rem;
+    color: var(--dark-blue);
+    font-weight: 900;
+}
+
+.body__plan-selected__price {
+    display: inline-block;
+    font-size: 1rem;
+    margin-top: .2rem;
+    color: var(--desaturated-blue);
+}
+
+.plan-card__body__change-plan-link {
+    font-size: .8rem;
+    color: var(--bright-blue);
+    font-weight: 900;
+    text-decoration: underline;
+}
+
+.main__plan-card__actions {
+    padding: 1rem;
+    display: grid;
+    gap: .5rem;
+}
+
+.body__actions__button {
+    padding: 1rem;
+    font-weight: 700;
+    font-size: .90rem;
+    border-radius: .7rem;
+}
+
+.button--bright-blue {
+    background-color: var(--bright-blue);
+    color: var(--very-pale-blue);
+}
+
+
+.button--desaturated-blue {
+    background-color: transparent;
+    color: var(--desaturated-blue);
+}
+
+@media screen and (min-width: 750px) {
+    .main {
+        background-image: url(../images/pattern-background-desktop.svg);
+        background-size: 100% 50%;
+
+    }
+
+    .main__plan-card {
+        max-width: 25rem;
+    }
+
+    .main__plan-card__content {
+        padding: 3rem 3.3rem;
+        padding-top: 2rem;
+    }
+
+    .plan-card__body__change-plan-link:hover {
+        color: var(--bright-blue-transparent);
+    }
+
+    .main__plan-card__actions {
+        padding: 0 2rem;
+        padding-bottom: 1.5rem;
+    }
+
+    .button--bright-blue:hover {
+        cursor: pointer;
+        background-color: var(--bright-blue-transparent);
+    }
+
+    .button--desaturated-blue:hover {
+        color: var(--dark-blue);
+
+    }
+}
